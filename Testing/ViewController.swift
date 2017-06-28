@@ -10,18 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let nsmd = NSMutableDictionary()
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var container: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.contentSize.height = innerView.frame.height
-        nsmd.setValue("my full name", forKey: "name")
         
-        print("\(nsmd)")
         
     }
 
@@ -32,7 +29,29 @@ class ViewController: UIViewController {
 
     @IBAction func clickButton(_ sender: UIButton, forEvent event: UIEvent) {
     
-        print("click")
+        var news:UIViewController?
+      
+        switch sender.tag {
+        case 1:
+            
+            news = self.storyboard?.instantiateViewController(withIdentifier: "frame1") as! FirstFrameController
+    
+            break;
+        case 2:
+            
+            news = self.storyboard?.instantiateViewController(withIdentifier: "frame2") as! SecondFrame
+            break;
+            
+        default:
+            
+            break;
+        }
+        
+        news?.view.frame = container.bounds
+        container.addSubview((news?.view)!)
+        addChildViewController(news!)
+        news?.didMove(toParentViewController: self)
+        
     
     }
 
