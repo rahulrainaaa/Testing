@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var container: UIView!
     
+    var news:UIViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.contentSize.height = innerView.frame.height
         
+        news = self.storyboard?.instantiateViewController(withIdentifier: "frame1") as! FirstFrameController
         
     }
 
@@ -29,8 +31,9 @@ class ViewController: UIViewController {
 
     @IBAction func clickButton(_ sender: UIButton, forEvent event: UIEvent) {
     
-        var news:UIViewController?
-      
+        
+      news?.removeFromParentViewController()
+        
         switch sender.tag {
         case 1:
             
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
         
         news?.view.frame = container.bounds
         container.addSubview((news?.view)!)
+        
         addChildViewController(news!)
         news?.didMove(toParentViewController: self)
         

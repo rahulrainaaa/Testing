@@ -15,6 +15,14 @@ class FirstFrameController: UIViewController {
         print("frame 1 did load")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Frame 1 will disappear")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("frame 1 will appear")
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         print("Frame 1 did disappear")
     }

@@ -12,11 +12,19 @@ class SecondFrame: UIViewController {
     
     override func viewDidLoad() {
         
-        print("frame 1 did load")
+        print("frame 2 did load")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Frame 2 will disappear")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("frame 2 will appear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("Frame 1 did disappear")
+        print("Frame 2 did disappear")
     }
     
 }
