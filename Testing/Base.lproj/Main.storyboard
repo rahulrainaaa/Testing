@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,11 +35,24 @@
                                                     <action selector="clickButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUA-TV-WHv"/>
                                                 </connections>
                                             </button>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opP-yL-cT3">
+                                                <rect key="frame" x="8" y="154" width="359" height="200"/>
+                                                <color key="backgroundColor" red="0.98020654180374323" green="1" blue="0.60842370262481338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="ECU-9S-Xzh"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="WWf-Oj-VVd" kind="embed" id="fJt-JN-mi4"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.5389736678" green="0.93192499750000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="opP-yL-cT3" firstAttribute="top" secondItem="Vob-kw-Tqn" secondAttribute="bottom" constant="23" id="Rpp-ic-Myx"/>
+                                            <constraint firstItem="opP-yL-cT3" firstAttribute="leading" secondItem="tse-eL-N8n" secondAttribute="leading" constant="8" id="aQv-Yf-Jzi"/>
                                             <constraint firstItem="Vob-kw-Tqn" firstAttribute="top" secondItem="tse-eL-N8n" secondAttribute="top" constant="101" id="buC-Ca-lu6"/>
                                             <constraint firstItem="Vob-kw-Tqn" firstAttribute="centerX" secondItem="tse-eL-N8n" secondAttribute="centerX" id="sEc-S9-HmW"/>
+                                            <constraint firstAttribute="trailing" secondItem="opP-yL-cT3" secondAttribute="trailing" constant="8" id="vRK-a4-vWt"/>
                                             <constraint firstAttribute="height" constant="780" id="w4C-sQ-do4"/>
                                         </constraints>
                                     </view>
@@ -71,6 +85,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="116.94152923538232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2IO-9S-NMQ">
+            <objects>
+                <viewController id="WWf-Oj-VVd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfh-2U-aV5">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFs-TW-Go1">
+                                <rect key="frame" x="10" y="10" width="340" height="178"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-vN-qxm">
+                                        <rect key="frame" x="64" y="28" width="121" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="b8t-eA-1Ei"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.65274054303072837" blue="0.96432715899690147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KZR-vN-qxm" secondAttribute="trailing" constant="155" id="AM0-1U-hdr"/>
+                                    <constraint firstItem="KZR-vN-qxm" firstAttribute="top" secondItem="JFs-TW-Go1" secondAttribute="top" constant="28" id="Wwg-HS-5j8"/>
+                                    <constraint firstItem="KZR-vN-qxm" firstAttribute="leading" secondItem="JFs-TW-Go1" secondAttribute="leading" constant="64" id="u4u-g6-Evj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49871578991537902" green="0.97372001819809073" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JFs-TW-Go1" secondAttribute="trailing" constant="-7" id="Bdc-Mj-Pov"/>
+                            <constraint firstItem="JFs-TW-Go1" firstAttribute="top" secondItem="rfh-2U-aV5" secondAttribute="topMargin" constant="10" id="HMO-Nn-caN"/>
+                            <constraint firstItem="JFs-TW-Go1" firstAttribute="leading" secondItem="rfh-2U-aV5" secondAttribute="leadingMargin" constant="-6" id="OcO-7y-ZQF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JFs-TW-Go1" secondAttribute="bottom" constant="12" id="rTJ-i1-FU6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jp-nM-1JS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bLy-v5-Pf7">
+            <objects>
+                <viewController id="ydo-lN-dgE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TZf-oj-CBH"/>
+                        <viewControllerLayoutGuide type="bottom" id="C4G-e9-nTM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mKa-p1-Ma2">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyx-MH-cQP">
+                                <rect key="frame" x="10" y="10" width="340" height="178"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97z-Rp-QF6">
+                                        <rect key="frame" x="113" y="55" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67837686669223762" green="0.36724503573323841" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69917137320713851" blue="0.085065512230299234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eyx-MH-cQP" secondAttribute="trailing" constant="-7" id="GpW-JO-krT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eyx-MH-cQP" secondAttribute="bottom" constant="12" id="IkM-73-rE5"/>
+                            <constraint firstItem="eyx-MH-cQP" firstAttribute="leading" secondItem="mKa-p1-Ma2" secondAttribute="leadingMargin" constant="-6" id="NB4-iO-PAr"/>
+                            <constraint firstItem="eyx-MH-cQP" firstAttribute="top" secondItem="mKa-p1-Ma2" secondAttribute="topMargin" constant="10" id="hTx-OL-SMB"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="359" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebO-ti-wTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="263"/>
         </scene>
     </scenes>
 </document>
