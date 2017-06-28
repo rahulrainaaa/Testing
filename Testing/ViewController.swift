@@ -32,7 +32,9 @@ class ViewController: UIViewController {
     @IBAction func clickButton(_ sender: UIButton, forEvent event: UIEvent) {
     
         
-      news?.removeFromParentViewController()
+        willMove(toParentViewController: news)
+        news?.removeFromParentViewController()
+        removeFromParentViewController()
         
         switch sender.tag {
         case 1:
