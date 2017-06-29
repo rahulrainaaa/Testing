@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -195,8 +196,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5J-0T-5L2">
-                                                    <rect key="frame" x="236" y="16" width="46" height="30"/>
-                                                    <state key="normal" title="V"/>
+                                                    <rect key="frame" x="236" y="16" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Z5J-0T-5L2" secondAttribute="height" multiplier="1:1" id="A7c-Aj-aNy"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="expandicon"/>
                                                     <connections>
                                                         <action selector="arrowEvent:forEvent:" destination="fYg-eS-0e2" eventType="touchUpInside" id="lvc-ki-jrj"/>
                                                     </connections>
@@ -218,7 +222,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="WKW-JJ-aup" firstAttribute="top" secondItem="MhA-1u-etp" secondAttribute="topMargin" constant="46" id="9vB-2c-c4H"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Z5J-0T-5L2" secondAttribute="trailing" constant="69" id="FIA-YV-1rY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="WKW-JJ-aup" secondAttribute="trailing" constant="18" id="YCq-jz-ro4"/>
                                                 <constraint firstItem="WKW-JJ-aup" firstAttribute="leading" secondItem="MhA-1u-etp" secondAttribute="leadingMargin" constant="17" id="b9h-B8-Kl1"/>
                                                 <constraint firstItem="Z5J-0T-5L2" firstAttribute="top" secondItem="8Nw-ff-HtE" secondAttribute="top" id="cnb-p4-Im5"/>
@@ -301,4 +304,7 @@
             <point key="canvasLocation" x="1006" y="263"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="expandicon" width="24" height="24"/>
+    </resources>
 </document>
