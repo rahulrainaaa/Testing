@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         
         addChildViewController(news!)
         news?.didMove(toParentViewController: self)
-        
     
     }
 
